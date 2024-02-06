@@ -1,1 +1,6 @@
 # Templates
+
+Templates to start:
+
+- jogl projects
+- simple kotlin programs outside intellij-idea
