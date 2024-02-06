@@ -1,0 +1,3 @@
+# Description
+
+This is the most simple template for kotlin programs that don't rely on intellij-idea, in other words this template can be run outside jetbrains IDE's.
