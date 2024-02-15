@@ -19,10 +19,6 @@
       <id>jogamp-mirror</id>
       <url>https://www.jogamp.org/deployment/maven/</url>
     </repository>
-    <!--repository>
-      <id>mvnrepository</id>
-      <url>https://repo.maven.apache.org/maven2/</url>
-    </repository-->
   </repositories>
 
   <build>
@@ -32,31 +28,37 @@
     <plugins>
       <!-- Build an executable JAR (with external dependencies) -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.6.0</version>
-        
+
         <configuration>
+
+          <appendAssemblyId>false</appendAssemblyId>
+
           <archive>
+
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+
             <manifest>
               <addClasspath>true</addClasspath>
               <mainClass>${project.groupId}.App</mainClass>
             </manifest>
+
           </archive>
-          <descriptiorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptiorRefs>
         </configuration>
 
         <executions>
           <execution>
-            <id>make-assembly</id> 
+            <id>create-archive</id> 
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
           </execution>
         </executions>
+
       </plugin>
 
       <!-- Enables to run  mvn exec:java -->
@@ -101,20 +103,6 @@
       <version>3.1.1</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.14.0</version>
-    </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-utils -->
-    <dependency>
-      <groupId>org.codehaus.plexus</groupId>
-      <artifactId>plexus-utils</artifactId>
-      <version>4.0.0</version>
-    </dependency>
   </dependencies>
 
 </project>
