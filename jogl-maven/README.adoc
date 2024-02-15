@@ -1,0 +1,22 @@
+# Run || Generate fat-jar
+
+- Run maven project
+
+[source, shell]
+----
+    ./mvnw exec:java
+----
+
+- Generate fat-jar
+
+[source, shell]
+----
+    ./mvnw package
+----
+
+- Run fat-jar
+[source, shell]
+----
+    java -jar ./target/opengl-1.0.jar
+----
+
