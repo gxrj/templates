@@ -2,6 +2,7 @@ plugins {
     id 'application'
 }
 
+
 repositories {
     maven {
         url "https://jogamp.org/deployment/maven/"
@@ -22,6 +23,6 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': application.mainClassName
+        attributes 'Main-Class': 'App'
     }
 }
