@@ -10,8 +10,8 @@
   <version>1.0</version>
 
   <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <repositories>
@@ -35,17 +35,15 @@
 
           <appendAssemblyId>false</appendAssemblyId>
 
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+
           <archive>
-
-            <descriptorRefs>
-              <descriptorRef>jar-with-dependencies</descriptorRef>
-            </descriptorRefs>
-
             <manifest>
               <addClasspath>true</addClasspath>
               <mainClass>${project.groupId}.App</mainClass>
             </manifest>
-
           </archive>
         </configuration>
 
@@ -102,7 +100,6 @@
       <artifactId>maven-install-plugin</artifactId>
       <version>3.1.1</version>
     </dependency>
-
   </dependencies>
 
 </project>
