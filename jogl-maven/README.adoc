@@ -17,6 +17,6 @@
 - Run fat-jar
 [source, shell]
 ----
-    java -jar ./target/opengl-1.0.jar
+    java -jar ./target/my-opengl-app-1.0.jar
 ----
 
